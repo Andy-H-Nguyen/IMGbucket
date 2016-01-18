@@ -44,4 +44,15 @@ class RegistrationsController < Devise::RegistrationsController
     devise_parameter_sanitizer.for(:sign_up).push(:payment)
   end
   
+  private
+
+  def sign_up_params
+    params.require(:user).permit(:plan, :email, :password, :password_confirmation)
+  end
+
+  def account_update_params
+    params.require(:user).permit(:plan, :email, :password, :password_confirmation, :current_password)
+  end
+
+  
 end
