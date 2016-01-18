@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160118012759) do
+ActiveRecord::Schema.define(version: 20160118021454) do
 
   create_table "images", force: :cascade do |t|
     t.string   "name"
@@ -48,7 +48,6 @@ ActiveRecord::Schema.define(version: 20160118012759) do
     t.string   "unconfirmed_email"
     t.datetime "created_at",                              null: false
     t.datetime "updated_at",                              null: false
-    t.string   "account_type",           default: "free", null: false
     t.string   "plan",                   default: "free"
   end
 
